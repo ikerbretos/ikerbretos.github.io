@@ -3,52 +3,71 @@ import { motion } from 'framer-motion';
 
 export const Hero: React.FC = () => {
     return (
-        <section id="hero" className="min-h-screen flex items-center justify-center px-4 md:px-24">
-            <div className="container max-w-5xl">
+        <section id="hero" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+            {/* Ambient Background Effect */}
+            <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[100px] animate-pulse"></div>
+                <div className="absolute bottom-[-10%] right-[-10%] w-[30%] h-[30%] bg-secondary/5 rounded-full blur-[100px] animate-pulse delay-1000"></div>
+            </div>
+
+            <div className="container mx-auto px-4 z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="max-w-3xl"
                 >
-                    <p className="font-mono text-primary mb-5 ml-1 text-lg">Hola, mi nombre es</p>
-                </motion.div>
+                    <motion.p
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.2, duration: 0.5 }}
+                        className="text-primary font-mono text-lg mb-6 tracking-wide"
+                    >
+                        Hola, mi nombre es
+                    </motion.p>
 
-                <motion.h1
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                    className="text-5xl md:text-7xl font-bold text-secondary mb-4 tracking-tight"
-                >
-                    Iker Bretos.
-                </motion.h1>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3, duration: 0.8 }}
+                        className="text-5xl md:text-7xl font-bold text-secondary mb-4 tracking-tight"
+                    >
+                        Iker Bretos.
+                    </motion.h1>
 
-                <motion.h2
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    className="text-4xl md:text-6xl font-bold text-text mb-8 tracking-tight"
-                >
-                    Construyo cosas para la web.
-                </motion.h2>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5, duration: 0.8 }}
+                        className="text-4xl md:text-6xl font-bold text-text-dim mb-8 leading-tight"
+                    >
+                        <span className="text-gradient-gold">Desarrollador Web</span> & <br className="hidden md:block" />
+                        Creador de Experiencias Digitales.
+                    </motion.h2>
 
-                <motion.p
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    className="text-text max-w-xl text-lg mb-12 leading-relaxed"
-                >
-                    Soy un ingeniero de software especializado en construir experiencias digitales excepcionales.
-                    Actualmente, estoy enfocado en construir productos accesibles y centrados en el usuario.
-                </motion.p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.7, duration: 0.8 }}
+                        className="text-text text-lg max-w-xl mb-12 leading-relaxed"
+                    >
+                        Especializado en transformar ideas en realidad digital de alto impacto.
+                        Diseño interfaces que no solo funcionan, sino que cautivan.
+                    </motion.p>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.4 }}
-                >
-                    <a href="#projects" className="px-8 py-4 border border-primary text-primary rounded hover:bg-primary/10 transition-all font-mono">
-                        Echa un vistazo a mis proyectos
-                    </a>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.9, duration: 0.5 }}
+                    >
+                        <a
+                            href="#projects"
+                            className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-medium text-bg bg-primary overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] rounded-sm"
+                        >
+                            <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-10"></span>
+                            <span className="relative">Ver Proyectos</span>
+                        </a>
+                    </motion.div>
                 </motion.div>
             </div>
         </section>

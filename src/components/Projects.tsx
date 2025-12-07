@@ -1,81 +1,86 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Folder } from 'lucide-react';
+import { Folder, Github, ExternalLink } from 'lucide-react';
 
 export const Projects: React.FC = () => {
     const projects = [
         {
-            title: "Sistema de Detección de Intrusos",
-            description: "Un NIDS basado en Python que analiza el tráfico de paquetes en tiempo real para detectar patrones anómalos y posibles exploits.",
-            tags: ["Python", "Scapy", "Machine Learning"],
+            title: "E-Commerce Premium",
+            description: "Plataforma de comercio electrónico de alto rendimiento con diseño minimalista y pagos seguros.",
+            tech: ["Next.js", "Stripe", "Tailwind", "PostgreSQL"],
             github: "#",
-            demo: "#"
+            external: "#"
         },
         {
-            title: "App de Chat Seguro",
-            description: "Plataforma de mensajería encriptada de extremo a extremo construida con React y Node.js implementando el protocolo Signal.",
-            tags: ["React", "Node.js", "Criptografía"],
+            title: "SaaS Dashboard",
+            description: "Panel de analíticas en tiempo real para empresas SaaS, con visualización de datos avanzada.",
+            tech: ["React", "D3.js", "Firebase", "Material UI"],
             github: "#",
-            demo: "#"
+            external: "#"
         },
         {
-            title: "Herramienta Forense Automatizada",
-            description: "Herramienta CLI en Bash para la recolección rápida de evidencia y análisis de logs en servidores Linux comprometidos.",
-            tags: ["Bash", "Linux", "Forense"],
+            title: "AI Chat Interface",
+            description: "Interfaz de chat moderna para interactuar con modelos de lenguaje grandes (LLMs).",
+            tech: ["TypeScript", "OpenAI API", "Vite", "Zustand"],
             github: "#",
-            demo: "#"
-        },
-        {
-            title: "NeonMint Portfolio",
-            description: "Este sitio web. Un portafolio personal minimalista basado en el diseño NeonMint.",
-            tags: ["React", "Tailwind", "Vite"],
-            github: "#",
-            demo: "#"
+            external: "#"
         }
     ];
 
     return (
         <section id="projects" className="py-24 px-4 md:px-24">
-            <div className="container max-w-5xl mx-auto">
+            <div className="container max-w-6xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="flex items-center gap-6 mb-12"
+                    className="flex items-center gap-4 mb-16"
                 >
                     <h2 className="text-3xl font-bold text-secondary flex items-baseline">
                         <span className="text-primary font-mono text-xl mr-2">03.</span>
-                        Cosas que he construido
+                        Proyectos Destacados
                     </h2>
-                    <div className="h-[1px] flex-grow bg-bg-light/50 max-w-[300px]"></div>
+                    <div className="h-[1px] flex-grow bg-white/10 max-w-[300px]"></div>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {projects.map((project, idx) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {projects.map((project, i) => (
                         <motion.div
-                            key={project.title}
-                            initial={{ opacity: 0, y: 20 }}
+                            key={i}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: idx * 0.1 }}
-                            className="bg-bg-light p-8 rounded shadow-lg hover:-translate-y-2 transition-transform duration-300 group flex flex-col h-full"
+                            transition={{ delay: i * 0.1, duration: 0.5 }}
+                            whileHover={{ y: -10 }}
+                            className="bg-bg-light/50 backdrop-blur-sm p-8 rounded-lg shadow-xl border border-white/5 hover:border-primary/30 transition-all duration-300 group flex flex-col h-full hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)]"
                         >
-                            <div className="flex justify-between items-start mb-8">
-                                <Folder size={40} className="text-primary" />
-                                <div className="flex gap-4">
-                                    <a href={project.github} className="text-text hover:text-primary transition-colors"><Github size={20} /></a>
-                                    <a href={project.demo} className="text-text hover:text-primary transition-colors"><ExternalLink size={20} /></a>
+                            <div className="flex justify-between items-center mb-6">
+                                <div className="text-primary">
+                                    <Folder size={40} strokeWidth={1.5} />
+                                </div>
+                                <div className="flex gap-4 text-text-dim">
+                                    <a href={project.github} className="hover:text-primary transition-colors">
+                                        <Github size={20} />
+                                    </a>
+                                    <a href={project.external} className="hover:text-primary transition-colors">
+                                        <ExternalLink size={20} />
+                                    </a>
                                 </div>
                             </div>
 
-                            <h3 className="text-xl font-bold text-secondary mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
-                            <p className="text-text mb-6 text-sm leading-relaxed flex-grow">
+                            <h3 className="text-xl font-bold text-secondary mb-3 group-hover:text-primary transition-colors">
+                                {project.title}
+                            </h3>
+
+                            <p className="text-text-dim mb-6 flex-grow ">
                                 {project.description}
                             </p>
 
-                            <ul className="flex flex-wrap gap-x-4 gap-y-2 font-mono text-xs text-text-dim mt-auto">
-                                {project.tags.map(tag => (
-                                    <li key={tag}>{tag}</li>
+                            <ul className="flex flex-wrap gap-3 font-mono text-xs text-text/80">
+                                {project.tech.map((t, idx) => (
+                                    <li key={idx} className="bg-primary/5 px-2 py-1 rounded text-primary/80">
+                                        {t}
+                                    </li>
                                 ))}
                             </ul>
                         </motion.div>

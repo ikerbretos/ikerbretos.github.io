@@ -5,32 +5,6 @@
 :root {
   --color-bg: #050505;
   --color-primary: #D4AF37;
-  --color-secondary: #E5E5E5;
-  --color-text: #A3A3A3;
-}
-
-@layer base {
-  body {
-    @apply bg-bg text-text font-sans antialiased leading-relaxed;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply text-secondary font-bold;
-  }
-
-  ::selection {
-    @apply bg-primary/20 text-primary;
-  }
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
