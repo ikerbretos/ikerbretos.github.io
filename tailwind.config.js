@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */
 export default {
     content: [
         "./index.html",
@@ -7,15 +8,17 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: '#00ff41',
-                secondary: '#00b8ff',
-                accent: '#ff0055',
-                bg: '#0a0a0a',
+                primary: '#64ffda', // Neon Mint
+                secondary: '#ccd6f6', // Lightest Slate (Headings)
+                bg: '#0a192f', // Dark Navy
+                'bg-light': '#112240', // Light Navy (Cards)
+                text: '#8892b0', // Slate (Body)
+                'text-dim': '#a8b2d1', // Light Slate
                 panel: 'rgba(255, 255, 255, 0.05)',
             },
             fontFamily: {
-                mono: ['"Fira Code"', 'monospace'],
-                sans: ['Inter', 'sans-serif'],
+                sans: ['"Calibre"', '"Inter"', '"San Francisco"', '"SF Pro Text"', '-apple-system', 'system-ui', 'sans-serif'],
+                mono: ['"SF Mono"', '"Fira Code"', '"Fira Mono"', '"Roboto Mono"', 'monospace'],
             }
         },
     },

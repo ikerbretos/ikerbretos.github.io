@@ -1,72 +1,89 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 export const Skills: React.FC = () => {
-
-    const skillCategories = [
+    const jobs = [
         {
-            title: "Seguridad Ofensiva",
-            skills: ["Metasploit", "Burp Suite", "Nmap", "Wireshark", "Inyección SQL", "XSS"]
+            company: "Tech Solutions Inc.",
+            role: "Ingeniero de Software Senior",
+            dates: "2023 - Presente",
+            tasks: [
+                "Lideré el desarrollo de una plataforma SaaS escalable utilizando React y Node.js.",
+                "Implementé CI/CD pipelines que redujeron el tiempo de despliegue en un 40%.",
+                "Mentoricé a 3 desarrolladores junior y realicé revisiones de código semanales."
+            ]
         },
         {
-            title: "Seguridad Defensiva",
-            skills: ["SIEM (Splunk/Elastic)", "IDS/IPS", "Firewalls", "Respuesta a Incidentes", "Análisis de Malware"]
-        },
-        {
-            title: "SysAdmin & Cloud",
-            skills: ["Linux (RHEL/Debian)", "Windows Server", "Active Directory", "AWS", "Docker", "Scripting Bash/Python"]
+            company: "StartUp Alpha",
+            role: "Desarrollador Full Stack",
+            dates: "2021 - 2023",
+            tasks: [
+                "Colaboré en el diseño de la arquitectura de microservicios.",
+                "Desarrollé APIs RESTful seguras y eficientes.",
+                "Optimizé el rendimiento del frontend mejorando el Core Web Vitals."
+            ]
         }
     ];
 
+    const [activeTab, setActiveTab] = useState(0);
+
     return (
-        <section id="skills" className="py-20 bg-white/[0.02] border-y border-white/5 relative">
-
-            {/* Background elements */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                <div className="absolute top-[20%] right-[10%] w-72 h-72 bg-primary/5 rounded-full blur-[100px]"></div>
-            </div>
-
-            <div className="container relative z-10">
+        <section id="experience" className="py-24 px-4 md:px-24">
+            <div className="container max-w-4xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mb-12"
+                    className="flex items-center gap-6 mb-12"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold flex items-center gap-3">
-                        <span className="text-primary">02.</span>
-                        Arsenal_Técnico
+                    <h2 className="text-3xl font-bold text-secondary flex items-baseline">
+                        <span className="text-primary font-mono text-xl mr-2">02.</span>
+                        Dónde he trabajado
                     </h2>
-                    <div className="h-1 w-20 bg-primary mt-4 rounded-full"></div>
+                    <div className="h-[1px] flex-grow bg-bg-light/50 max-w-[300px]"></div>
                 </motion.div>
 
-                <div className="grid md:grid-cols-3 gap-8">
-                    {skillCategories.map((category, idx) => (
+                <div className="flex flex-col md:flex-row gap-8">
+                    {/* Tabs */}
+                    <div className="flex md:flex-col overflow-x-auto md:w-32 border-b md:border-b-0 md:border-l border-bg-light">
+                        {jobs.map((job, idx) => (
+                            <button
+                                key={idx}
+                                onClick={() => setActiveTab(idx)}
+                                className={`px - 4 py - 3 text - sm font - mono text - left whitespace - nowrap transition - colors hover: bg - bg - light hover: text - primary 
+                                    ${activeTab === idx ? 'text-primary border-b-2 md:border-b-0 md:border-l-2 border-primary bg-bg-light/5' : 'text-text border-l-transparent'} `}
+                            >
+                                {job.company}
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1 min-h-[300px]">
                         <motion.div
-                            key={category.title}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: idx * 0.1 }}
-                            className="bg-[#0a0a0a]/50 backdrop-blur-sm border border-white/5 p-6 rounded hover:border-primary/50 transition-all group hover:-translate-y-1 hover:shadow-[0_5px_20px_rgba(0,255,65,0.1)]"
+                            key={activeTab}
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.3 }}
                         >
-                            <h3 className="text-xl font-mono text-secondary mb-6 group-hover:text-primary transition-colors flex items-center gap-2">
-                                <span className="opacity-50 text-sm">{'{'}</span>
-                                {category.title}
-                                <span className="opacity-50 text-sm">{'}'}</span>
+                            <h3 className="text-xl font-bold text-secondary mb-1">
+                                {jobs[activeTab].role} <span className="text-primary">@ {jobs[activeTab].company}</span>
                             </h3>
-                            <div className="flex flex-wrap gap-2">
-                                {category.skills.map(skill => (
-                                    <div key={skill} className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors bg-white/5 px-3 py-1 rounded-sm border border-transparent hover:border-primary/30">
-                                        <span className="text-primary text-xs">▹</span>
-                                        {skill}
-                                    </div>
+                            <p className="font-mono text-sm text-text-dim mb-6">{jobs[activeTab].dates}</p>
+                            <ul className="space-y-4">
+                                {jobs[activeTab].tasks.map((task, i) => (
+                                    <li key={i} className="flex items-start gap-3 text-text">
+                                        <span className="text-primary mt-1.5">▹</span>
+                                        {task}
+                                    </li>
                                 ))}
-                            </div>
+                            </ul>
                         </motion.div>
-                    ))}
+                    </div>
                 </div>
             </div>
         </section>
     );
 };
+

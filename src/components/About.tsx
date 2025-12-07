@@ -1,86 +1,59 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Book, Award, User } from 'lucide-react';
 
 export const About: React.FC = () => {
     return (
-        <section id="about" className="py-20 relative overflow-hidden">
-            <div className="container">
+        <section id="about" className="py-24 px-4 md:px-24">
+            <div className="container max-w-4xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mb-12"
+                    className="flex items-center gap-6 mb-12"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold flex items-center gap-3">
-                        <span className="text-primary">01.</span>
-                        Especificaciones_Sistema
+                    <h2 className="text-3xl font-bold text-secondary flex items-baseline">
+                        <span className="text-primary font-mono text-xl mr-2">01.</span>
+                        Sobre Mí
                     </h2>
-                    <div className="h-1 w-20 bg-primary mt-4 rounded-full"></div>
+                    <div className="h-[1px] flex-grow bg-bg-light/50 max-w-[300px]"></div>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 gap-12">
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="space-y-6"
-                    >
-                        <h3 className="text-xl text-secondary font-mono flex items-center gap-2">
-                            <User size={20} />
-                            /SOBRE_MÍ
-                        </h3>
-                        <p className="text-gray-400 leading-relaxed text-lg">
-                            Entusiasta de la ciberseguridad con sólida experiencia en administración de sistemas y análisis forense digital.
-                            Mi objetivo es asegurar infraestructuras digitales y analizar vulnerabilidades para prevenir ciberamenazas.
-                            Estoy constantemente actualizando mi kernel con los últimos protocolos de seguridad e inteligencia de amenazas.
+                <div className="grid md:grid-cols-[2fr_1fr] gap-12">
+                    <div className="space-y-6 text-text text-lg leading-relaxed">
+                        <p>
+                            Hola! Mi nombre es Iker y disfruto creando cosas que viven en internet.
+                            Mi interés por el desarrollo web comenzó en 2020 cuando decidí intentar editar
+                            temas personalizados de Tumblr — ¡resultó que hackear HTML y CSS me enseñó mucho más
+                            sobre diseño y limpieza de código de lo que esperaba!
                         </p>
-                        <p className="text-gray-400 leading-relaxed text-lg">
-                            Apasionado por el código abierto, los CTFs y el hacking ético. Creo en la defensa proactiva y la monitorización rigurosa.
+                        <p>
+                            Hoy en día, he tenido el privilegio de trabajar en una agencia de publicidad,
+                            una start-up, y un estudio de diseño. Mi enfoque principal estos días es construir
+                            productos inclusivos y experiencias digitales accesibles.
                         </p>
-                    </motion.div>
+                        <p>
+                            Aquí hay algunas tecnologías con las que he estado trabajando recientemente:
+                        </p>
+                        <ul className="grid grid-cols-2 gap-2 text-sm font-mono mt-4">
+                            {['JavaScript (ES6+)', 'TypeScript', 'React', 'Vue', 'Node.js', 'WordPress'].map(tech => (
+                                <li key={tech} className="flex items-center gap-2">
+                                    <span className="text-primary">▹</span>
+                                    {tech}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="space-y-8"
-                    >
-                        <div>
-                            <h3 className="text-xl text-secondary font-mono flex items-center gap-2 mb-6">
-                                <Book size={20} />
-                                /EDUCACIÓN
-                            </h3>
-                            <div className="border-l-2 border-white/10 pl-8 relative space-y-12">
-                                <div className="relative group">
-                                    <div className="absolute -left-[39px] top-1 w-5 h-5 rounded-full bg-bg border-2 border-primary group-hover:bg-primary group-hover:shadow-[0_0_10px_rgba(0,255,65,0.5)] transition-all"></div>
-                                    <h4 className="text-xl font-bold text-white group-hover:text-primary transition-colors">Grado en Ingeniería Informática</h4>
-                                    <div className="text-primary font-mono text-sm mt-1">Universidad X | 2020 - 2024</div>
-                                    <p className="text-gray-400 mt-2 text-sm">Especialización en Ingeniería de Sistemas y Seguridad de Redes.</p>
-                                </div>
-                                <div className="relative group">
-                                    <div className="absolute -left-[39px] top-1 w-5 h-5 rounded-full bg-bg border-2 border-primary group-hover:bg-primary group-hover:shadow-[0_0_10px_rgba(0,255,65,0.5)] transition-all"></div>
-                                    <h4 className="text-xl font-bold text-white group-hover:text-primary transition-colors">Máster en Ciberseguridad</h4>
-                                    <div className="text-primary font-mono text-sm mt-1">Instituto Tecnológico | 2024 - Presente</div>
-                                    <p className="text-gray-400 mt-2 text-sm">Enfoque en Amenazas Persistentes Avanzadas (APT) y Análisis de Malware.</p>
-                                </div>
+                    <div className="relative group mx-auto md:mx-0 max-w-[300px]">
+                        <div className="absolute top-4 left-4 w-full h-full border-2 border-primary rounded z-0 group-hover:top-2 group-hover:left-2 transition-all duration-300"></div>
+                        <div className="relative z-10 bg-primary/20 rounded overflow-hidden group-hover:bg-transparent transition-colors duration-300">
+                            <div className="aspect-square bg-gray-800 flex items-center justify-center text-gray-600">
+                                {/* Placeholder for user image if requested later */}
+                                [FOTO_PERFIL]
                             </div>
+                            <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-300"></div>
                         </div>
-
-                        <div>
-                            <h3 className="text-xl text-secondary font-mono flex items-center gap-2 mb-6">
-                                <Award size={20} />
-                                /CERTIFICACIONES
-                            </h3>
-                            <div className="flex flex-wrap gap-3">
-                                {['CompTIA Security+', 'CEH v12', 'CISSP Associate', 'AWS Security'].map((cert) => (
-                                    <span key={cert} className="px-4 py-2 bg-white/5 border border-white/10 text-sm rounded hover:border-primary/50 hover:bg-primary/5 hover:text-primary transition-all cursor-default backdrop-blur-sm">
-                                        {cert}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>
