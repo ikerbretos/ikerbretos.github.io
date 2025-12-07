@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-/** @type {import('tailwindcss').Config} */
 export default {
     content: [
         "./index.html",
@@ -8,13 +7,13 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: '#64ffda', // Neon Mint
-                secondary: '#ccd6f6', // Lightest Slate (Headings)
-                bg: '#0a192f', // Dark Navy
-                'bg-light': '#112240', // Light Navy (Cards)
-                text: '#8892b0', // Slate (Body)
-                'text-dim': '#a8b2d1', // Light Slate
-                panel: 'rgba(255, 255, 255, 0.05)',
+                primary: '#D4AF37', // Metallic Gold
+                secondary: '#E5E5E5', // Platinum/White
+                bg: '#050505', // Rich Black
+                'bg-light': '#121212', // Off-Black (Cards)
+                text: '#A3A3A3', // Silver Gray
+                'text-dim': '#737373', // Darker Gray
+                panel: 'rgba(255, 255, 255, 0.03)',
             },
             fontFamily: {
                 sans: ['"Calibre"', '"Inter"', '"San Francisco"', '"SF Pro Text"', '-apple-system', 'system-ui', 'sans-serif'],
