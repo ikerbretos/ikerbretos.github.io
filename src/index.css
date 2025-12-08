@@ -4,19 +4,26 @@
 
 :root {
   /* Light Mode Defaults */
-  --color-bg: #FFFFFF;
+  --color-bg: #FCFCFC;
+  --color-bg-light: #F0F0F0;
   --color-primary: #E63946;
-  --color-text: #0a0a0a;
-  /* Almost Black for high contrast */
-  --color-secondary: #1D3557;
+  --color-secondary: #0a0a0a;
+  /* Headings -> Black */
+  --color-text: #2d2d2d;
+  /* Body -> Dark Gray */
+  --color-text-dim: #525252;
 }
 
 .dark {
   /* Dark Mode Overrides */
   --color-bg: #050505;
+  --color-bg-light: #121212;
   --color-primary: #E63946;
   --color-secondary: #F1FAEE;
+  /* Headings -> White */
   --color-text: #A3A3A3;
+  /* Body -> Light Gray */
+  --color-text-dim: #737373;
 }
 
 ::-webkit-scrollbar-track {
