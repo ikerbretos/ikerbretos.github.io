@@ -43,10 +43,10 @@ export const Hero: React.FC = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 0.8 }}
-                        className="text-4xl md:text-6xl font-bold text-text-dim mb-8 leading-tight"
+                        className="text-3xl md:text-5xl font-bold text-text-dim mb-8 leading-tight"
                     >
-                        <span className="text-gradient-gold">Desarrollador Web</span> & <br className="hidden md:block" />
-                        Creador de Experiencias Digitales.
+                        <span className="text-gradient-gold">Administrador de Sistemas</span> & <br className="hidden md:block" />
+                        Especialista en Ciberseguridad.
                     </motion.h2>
 
                     <motion.p
@@ -55,8 +55,8 @@ export const Hero: React.FC = () => {
                         transition={{ delay: 0.7, duration: 0.8 }}
                         className="text-text text-lg max-w-xl mb-12 leading-relaxed"
                     >
-                        Especializado en transformar ideas en realidad digital de alto impacto.
-                        Diseño interfaces que no solo funcionan, sino que cautivan.
+                        Apasionado por la seguridad ofensiva, el análisis forense y la automatización de infraestructuras.
+                        Domino Python, Bash y Scripting para proteger y optimizar entornos críticos.
                     </motion.p>
 
                     <motion.div

@@ -23,9 +23,9 @@ export const Contact: React.FC = () => {
                 </motion.div>
 
                 <footer className="mt-32 text-sm font-mono text-text-dim hover:text-primary transition-colors">
-                    <a href="https://github.com/bchiang7/v4" target="_blank" rel="noopener noreferrer">
-                        Inspirado en NeonMint & Brittany Chiang
-                    </a>
+                    <div className="text-center mt-20 text-text-dim font-mono text-xs">
+                        <p>Diseñado y Construido por Iker Bretos</p>
+                    </div>
                 </footer>
             </div>
         </section>

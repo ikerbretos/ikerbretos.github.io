@@ -35,8 +35,8 @@ export const Navbar: React.FC = () => {
     };
 
     const links = [
-        { name: 'Sobre Mí', href: '#about' },
-        { name: 'Experiencia', href: '#experience' },
+        { name: 'Formación', href: '#education' },
+        { name: 'Habilidades', href: '#skills' },
         { name: 'Proyectos', href: '#projects' },
         { name: 'Contacto', href: '#contact' },
     ];
