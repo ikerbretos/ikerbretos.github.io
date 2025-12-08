@@ -1,10 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ParticlesBackground } from './ParticlesBackground';
 
 export const Hero: React.FC = () => {
     return (
         <section id="hero" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
-            {/* Ambient Background Effect */}
+
+            <ParticlesBackground />
+
+            {/* Ambient Background Effect (Retained but subtle) */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[100px] animate-pulse"></div>
                 <div className="absolute bottom-[-10%] right-[-10%] w-[30%] h-[30%] bg-secondary/5 rounded-full blur-[100px] animate-pulse delay-1000"></div>
@@ -62,7 +66,7 @@ export const Hero: React.FC = () => {
                     >
                         <a
                             href="#projects"
-                            className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-medium text-bg bg-primary overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] rounded-sm"
+                            className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-medium text-bg bg-primary overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(230,57,70,0.3)] rounded-sm"
                         >
                             <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-10"></span>
                             <span className="relative">Ver Proyectos</span>

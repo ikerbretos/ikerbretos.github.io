@@ -3,8 +3,19 @@
 @tailwind utilities;
 
 :root {
+  /* Light Mode Defaults */
+  --color-bg: #FFFFFF;
+  --color-primary: #E63946;
+  --color-text: #1D3557;
+  --color-secondary: #457B9D;
+}
+
+.dark {
+  /* Dark Mode Overrides */
   --color-bg: #050505;
-  --color-primary: #D4AF37;
+  --color-primary: #E63946;
+  --color-secondary: #F1FAEE;
+  --color-text: #A3A3A3;
 }
 
 ::-webkit-scrollbar-track {
