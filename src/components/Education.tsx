@@ -7,6 +7,12 @@ export const Education: React.FC = () => {
 
     const education = [
         {
+            title: "Curso de Especialización en Ciberseguridad en Entornos de las Tecnologías de la Información",
+            institution: "Instituto Sierra de Guara",
+            year: "20/10/2025 – Actualidad",
+            description: "Especialización avanzada en seguridad informática, hacking ético, análisis forense y protección de infraestructuras críticas."
+        },
+        {
             title: "Curso Superior Informática Forense",
             institution: "INESEM",
             year: "09/2021 – 01/2022",
