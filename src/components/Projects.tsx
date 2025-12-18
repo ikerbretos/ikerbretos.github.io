@@ -37,7 +37,7 @@ export const Projects: React.FC = () => {
                     className="flex items-center gap-4 mb-16"
                 >
                     <h2 className="text-3xl font-bold text-secondary flex items-baseline">
-                        <span className="text-primary font-mono text-xl mr-2">03.</span>
+                        <span className="text-primary font-mono text-xl mr-2">04.</span>
                         Proyectos Destacados
                     </h2>
                     <div className="h-[1px] flex-grow bg-white/10 max-w-[300px]"></div>

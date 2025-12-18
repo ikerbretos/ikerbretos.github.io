@@ -29,18 +29,6 @@ export const Navbar: React.FC = () => {
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, [theme]);
-
-    const toggleTheme = () => {
-        setTheme(prev => prev === 'dark' ? 'light' : 'dark');
-    };
-
-    const links = [
-        { name: 'Formación', href: '#education' },
-        { name: 'Habilidades', href: '#skills' },
-        { name: 'Proyectos', href: '#projects' },
-        { name: 'Contacto', href: '#contact' },
-    ];
-
     return (
         <motion.nav
             initial={{ y: -100 }}

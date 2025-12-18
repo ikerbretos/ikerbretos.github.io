@@ -21,27 +21,15 @@ export const About: React.FC = () => {
                 <div className="grid md:grid-cols-[2fr_1fr] gap-12">
                     <div className="space-y-6 text-text text-lg leading-relaxed">
                         <p>
-                            Hola! Mi nombre es Iker y disfruto creando cosas que viven en internet.
-                            Mi interés por el desarrollo web comenzó en 2020 cuando decidí intentar editar
-                            temas personalizados de Tumblr — ¡resultó que hackear HTML y CSS me enseñó mucho más
-                            sobre diseño y limpieza de código de lo que esperaba!
+                            Administrador de Sistemas con más de 3 años de experiencia en la gestión, mantenimiento y soporte de infraestructuras tecnológicas para empresas.
                         </p>
                         <p>
-                            Hoy en día, he tenido el privilegio de trabajar en una agencia de publicidad,
-                            una start-up, y un estudio de diseño. Mi enfoque principal estos días es construir
-                            productos inclusivos y experiencias digitales accesibles.
+                            Especializado en la administración de servidores, redes y sistemas operativos, garantizando la seguridad, disponibilidad y rendimiento de los entornos TI.
+                            Actualmente brindo soporte técnico a empresas, resolviendo incidencias y optimizando procesos para mejorar la eficiencia operativa.
                         </p>
                         <p>
-                            Aquí hay algunas tecnologías con las que he estado trabajando recientemente:
+                            Me considero hábil en la configuración de sistemas, virtualización, gestión de usuarios y resolución de problemas, con un enfoque proactivo y orientado a la mejora continua.
                         </p>
-                        <ul className="grid grid-cols-2 gap-2 text-sm font-mono mt-4">
-                            {['JavaScript (ES6+)', 'TypeScript', 'React', 'Vue', 'Node.js', 'WordPress'].map(tech => (
-                                <li key={tech} className="flex items-center gap-2">
-                                    <span className="text-primary">▹</span>
-                                    {tech}
-                                </li>
-                            ))}
-                        </ul>
                     </div>
 
                     <div className="relative group mx-auto md:mx-0 max-w-[300px]">
