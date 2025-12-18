@@ -7,16 +7,16 @@ export const Education: React.FC = () => {
 
     const education = [
         {
-            title: "Administración de Sistemas Informáticos en Red (ASIR)",
-            institution: "Instituto FOC",
-            year: "09/2018 – 04/2021",
-            description: "FP Grado Superior. Formación especializada en administración de sistemas y redes."
-        },
-        {
             title: "Curso Superior Informática Forense",
             institution: "INESEM",
             year: "09/2021 – 01/2022",
             description: "Especialización en análisis forense digital y seguridad."
+        },
+        {
+            title: "Administración de Sistemas Informáticos en Red (ASIR)",
+            institution: "Instituto FOC",
+            year: "09/2018 – 04/2021",
+            description: "FP Grado Superior. Formación especializada en administración de sistemas y redes."
         },
         {
             title: "Técnico en Sistemas Microinformáticos y Redes",
