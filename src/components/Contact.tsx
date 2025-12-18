@@ -17,16 +17,12 @@ export const Contact: React.FC = () => {
                         Ya sea que tengas una pregunta o simplemente quieras saludar, ¡haré todo lo posible por responderte!
                     </p>
 
-                    <a href="mailto:email@example.com" className="px-8 py-4 border border-primary text-primary rounded hover:bg-primary/10 transition-all font-mono text-lg">
-                        Saluda
+                    <a href="mailto:iker.bretos.ib@gmail.com" className="px-8 py-4 border border-primary text-primary rounded hover:bg-primary/10 transition-all font-mono text-lg">
+                        Contacta
                     </a>
                 </motion.div>
 
-                <footer className="mt-32 text-sm font-mono text-text-dim hover:text-primary transition-colors">
-                    <div className="text-center mt-20 text-text-dim font-mono text-xs">
-                        <p>Diseñado y Construido por Iker Bretos</p>
-                    </div>
-                </footer>
+
             </div>
         </section>
     );
