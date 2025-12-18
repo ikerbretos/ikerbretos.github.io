@@ -25,10 +25,10 @@ export const About: React.FC = () => {
                         </p>
                         <p>
                             Especializado en la administración de servidores, redes y sistemas operativos, garantizando la seguridad, disponibilidad y rendimiento de los entornos TI.
-                            Actualmente brindo soporte técnico a empresas, resolviendo incidencias y optimizando procesos para mejorar la eficiencia operativa.
+                            Actualmente brindando soporte técnico a empresas, resolviendo incidencias y optimizando procesos para mejorar la eficiencia operativa.
                         </p>
                         <p>
-                            Me considero hábil en la configuración de sistemas, virtualización, gestión de usuarios y resolución de problemas, con un enfoque proactivo y orientado a la mejora continua.
+                            Hábil en la configuración de sistemas, virtualización, gestión de usuarios y resolución de problemas, con un enfoque proactivo y orientado a la mejora continua.
                         </p>
                     </div>
 

@@ -55,8 +55,7 @@ export const Hero: React.FC = () => {
                         transition={{ delay: 0.7, duration: 0.8 }}
                         className="text-text text-lg max-w-xl mb-12 leading-relaxed"
                     >
-                        Apasionado por la seguridad ofensiva, el análisis forense y la automatización de infraestructuras.
-                        Domino Python, Bash y Scripting para proteger y optimizar entornos críticos.
+                        Administrador de Sistemas con más de 3 años de experiencia en la gestión, mantenimiento y soporte de infraestructuras tecnológicas para empresas. Especializado en la administración de servidores, redes y sistemas operativos, garantizando la seguridad, disponibilidad y rendimiento de los entornos TI. Actualmente brindando soporte técnico a empresas, resolviendo incidencias y optimizando procesos para mejorar la eficiencia operativa. Hábil en la configuración de sistemas, virtualización, gestión de usuarios y resolución de problemas, con un enfoque proactivo y orientado a la mejora continua.
                     </motion.p>
 
                     <motion.div
