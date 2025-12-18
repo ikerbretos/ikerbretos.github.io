@@ -25,8 +25,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
             </main>
 
             <footer className="text-center py-8 text-[var(--color-text-dim)] text-xs font-mono border-t border-[var(--color-panel)] mt-20 bg-black/40 backdrop-blur-sm z-10 relative">
-                <p className="mb-2">ESTADO DEL SISTEMA: <span className="text-[var(--color-primary)]">OPERATIVO</span></p>
-                <p>© {new Date().getFullYear()} NUCLEO SEGURO. TODOS LOS DERECHOS RESERVADOS.</p>
+                <p className="mb-2">Diseñado por <span className="text-[var(--color-primary)]">Iker Bretos</span></p>
             </footer>
         </div>
     );

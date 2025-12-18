@@ -86,8 +86,8 @@ export const Experience: React.FC = () => {
 
                             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 gap-2">
                                 <h3 className="text-xl font-bold text-secondary">{job.title}</h3>
-                                <div className="flex items-center gap-2 text-primary font-mono text-xs bg-primary/10 px-3 py-1 rounded-full w-fit">
-                                    <Calendar size={12} />
+                                <div className="flex items-center gap-2 text-primary font-mono text-xs bg-primary/10 px-2 py-1 rounded w-fit whitespace-nowrap">
+                                    <Calendar size={14} />
                                     {job.period}
                                 </div>
                             </div>
