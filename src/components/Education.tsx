@@ -97,8 +97,8 @@ export const Education: React.FC = () => {
 
                             <div className="flex flex-col md:flex-row md:items-center gap-2 mb-2">
                                 <h3 className="text-xl font-bold text-secondary">{item.title}</h3>
-                                <span className="text-primary font-mono text-xs px-2 py-1 bg-primary/10 rounded ml-0 md:ml-4 w-fit flex items-center gap-1">
-                                    <Calendar size={12} /> {item.year}
+                                <span className="text-primary font-mono text-xs px-2 py-1 bg-primary/10 rounded ml-0 md:ml-4 w-fit flex items-center gap-1 whitespace-nowrap">
+                                    <Calendar size={14} /> {item.year}
                                 </span>
                             </div>
 
