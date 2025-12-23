@@ -5,25 +5,25 @@ import { Folder, Github, ExternalLink } from 'lucide-react';
 export const Projects: React.FC = () => {
     const projects = [
         {
-            title: "E-Commerce Premium",
-            description: "Plataforma de comercio electrónico de alto rendimiento con diseño minimalista y pagos seguros.",
-            tech: ["Next.js", "Stripe", "Tailwind", "PostgreSQL"],
-            github: "#",
-            external: "#"
+            title: "Mailtransfer-Tool",
+            description: "Herramienta automatizada en Python para la transferencia rápida y segura de correos electrónicos entre servidores.",
+            tech: ["Python", "Automation", "SMTP/IMAP", "Security"],
+            github: "https://github.com/ikerbretos/Mailtransfer-Tool",
+            external: "https://github.com/ikerbretos/Mailtransfer-Tool"
         },
         {
-            title: "SaaS Dashboard",
-            description: "Panel de analíticas en tiempo real para empresas SaaS, con visualización de datos avanzada.",
-            tech: ["React", "D3.js", "Firebase", "Material UI"],
-            github: "#",
-            external: "#"
+            title: "PakitoBomberBOT",
+            description: "Bot multifuncional avanzado, diseñado para automatización de tareas y gestión de comunidades.",
+            tech: ["Python", "Discord.py", "AsyncIO", "API Integration"],
+            github: "https://github.com/ikerbretos/PakitoBomberBOT",
+            external: "https://github.com/ikerbretos/PakitoBomberBOT"
         },
         {
-            title: "AI Chat Interface",
-            description: "Interfaz de chat moderna para interactuar con modelos de lenguaje grandes (LLMs).",
-            tech: ["TypeScript", "OpenAI API", "Vite", "Zustand"],
-            github: "#",
-            external: "#"
+            title: "nexus-osint",
+            description: "Framework de inteligencia de fuentes abiertas (OSINT) para investigación y análisis de datos públicos.",
+            tech: ["Python", "OSINT", "Data Analysis", "Reconnaissance"],
+            github: "https://github.com/ikerbretos/nexus-osint",
+            external: "https://github.com/ikerbretos/nexus-osint"
         }
     ];
 

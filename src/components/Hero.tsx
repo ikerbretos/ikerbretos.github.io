@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 0.8 }}
-                        className="text-3xl md:text-5xl font-bold text-text-dim mb-8 leading-tight"
+                        className="text-3xl md:text-5xl font-bold text-secondary mb-8 leading-tight"
                     >
                         <span className="text-gradient-gold">Administrador de Sistemas</span> & <br className="hidden md:block" />
                         Entusiasta de la Ciberseguridad y Forense.
