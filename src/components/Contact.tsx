@@ -17,7 +17,7 @@ export const Contact: React.FC = () => {
                         Ya sea que tengas una pregunta o simplemente quieras saludar, ¡haré todo lo posible por responderte!
                     </p>
 
-                    <a href="mailto:iker.bretos.ib@gmail.com" className="px-8 py-4 border border-primary text-primary rounded hover:bg-primary/10 transition-all font-mono text-lg">
+                    <a href="mailto:ikerbretos@proton.me" className="px-8 py-4 border border-primary text-primary rounded hover:bg-primary/10 transition-all font-mono text-lg">
                         Contacta
                     </a>
                 </motion.div>

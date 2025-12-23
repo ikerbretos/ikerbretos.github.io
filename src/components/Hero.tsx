@@ -46,7 +46,7 @@ export const Hero: React.FC = () => {
                         className="text-3xl md:text-5xl font-bold text-text-dim mb-8 leading-tight"
                     >
                         <span className="text-gradient-gold">Administrador de Sistemas</span> & <br className="hidden md:block" />
-                        Especialista en Ciberseguridad.
+                        Entusiasta de la Ciberseguridad y Forense.
                     </motion.h2>
 
                     <motion.p
