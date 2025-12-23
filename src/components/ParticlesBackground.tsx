@@ -49,13 +49,24 @@ export const ParticlesBackground: React.FC = () => {
                 let dy = mouse.y - this.y;
                 let distance = Math.sqrt(dx * dx + dy * dy);
 
-                if (distance < 150) {
-                    const angle = Math.atan2(dy, dx);
-                    const force = (150 - distance) / 150;
-                    const repulsion = force * 5;
+                // Attraction radius can be larger
+                const interactionRadius = mouse.isPressed ? 300 : 150;
 
-                    this.x -= Math.cos(angle) * repulsion;
-                    this.y -= Math.sin(angle) * repulsion;
+                if (distance < interactionRadius) {
+                    const angle = Math.atan2(dy, dx);
+                    const force = (interactionRadius - distance) / interactionRadius;
+
+                    if (mouse.isPressed) {
+                        // Attraction
+                        const attraction = force * 10; // Stronger force for attraction
+                        this.x += Math.cos(angle) * attraction;
+                        this.y += Math.sin(angle) * attraction;
+                    } else {
+                        // Repulsion
+                        const repulsion = force * 5;
+                        this.x -= Math.cos(angle) * repulsion;
+                        this.y -= Math.sin(angle) * repulsion;
+                    }
                 }
 
                 this.x += this.directionX;
@@ -75,7 +86,8 @@ export const ParticlesBackground: React.FC = () => {
 
         const mouse = {
             x: -1000,
-            y: -1000
+            y: -1000,
+            isPressed: false
         };
 
         const handleMouseMove = (e: MouseEvent) => {
@@ -83,7 +95,17 @@ export const ParticlesBackground: React.FC = () => {
             mouse.y = e.y;
         };
 
+        const handleMouseDown = () => {
+            mouse.isPressed = true;
+        };
+
+        const handleMouseUp = () => {
+            mouse.isPressed = false;
+        };
+
         window.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener('mousedown', handleMouseDown);
+        window.addEventListener('mouseup', handleMouseUp);
 
         const init = () => {
             particles = [];
@@ -128,6 +150,8 @@ export const ParticlesBackground: React.FC = () => {
         return () => {
             window.removeEventListener('resize', resizeCanvas);
             window.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('mousedown', handleMouseDown);
+            window.removeEventListener('mouseup', handleMouseUp);
             cancelAnimationFrame(animationFrameId);
         };
     }, []);
