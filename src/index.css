@@ -7,9 +7,9 @@
   --color-bg: #FFFFFF;
   --color-bg-light: #F0F0F0;
   --color-primary: #E63946;
-  --color-secondary: #0a0a0a;
+  --color-secondary: #000000;
   /* Headings -> Black */
-  --color-text: #2d2d2d;
+  --color-text: #121212;
   /* Body -> Dark Gray */
   --color-text-dim: #525252;
 }
