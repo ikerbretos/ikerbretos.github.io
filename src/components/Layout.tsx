@@ -24,7 +24,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 {children}
             </main>
 
-            <footer className="text-center py-8 text-[var(--color-text-dim)] text-xs font-mono border-t border-[var(--color-panel)] mt-20 bg-black/40 backdrop-blur-sm z-10 relative">
+            <footer className="text-center py-8 text-[var(--color-text-dim)] text-xs font-mono border-t border-[var(--color-panel)] mt-20 bg-transparent dark:bg-black/40 backdrop-blur-sm z-10 relative">
                 <p className="mb-2">Diseñado por <span className="text-[var(--color-primary)]">Iker Bretos</span></p>
             </footer>
         </div>
